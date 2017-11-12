@@ -27,7 +27,7 @@
             </div>
             <% if comment.user == current_user %>
               <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" } do %>
-                <span>(class="glyphicon glyphicon-remove delete-comment")</span>
+                <span class="glyphicon glyphicon-remove delete-comment"></span>
               <% end %>
             <% end %>
           </div>
@@ -36,7 +36,7 @@
     </div>
     <div class="comment-like-form row">
       <div class="like-button col-sm-1">
-        <span>(class="glyphicon glyphicon-heart-empty")</span>
+        <span class="glyphicon glyphicon-heart-empty"></span>
       </div>
       <div class="comment-form col-sm-11">
         <%= form_for [post, post.comments.new] do |f| %>

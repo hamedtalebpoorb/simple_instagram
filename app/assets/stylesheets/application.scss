@@ -12,11 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ 
  */
 /*// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "glyphicons";
 
 body {
   background-color: #fafafa;
@@ -86,8 +89,9 @@ body {
   }
 }
 
+
 .post-bottom {
-  .user-name, .comment-content {
+  .user-name, .comment-content { 
     display: inline;
   }
   .caption {
@@ -157,3 +161,9 @@ body {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
+/*
+.like-button {
+  @extend %glyphicon-heart-empty;
+}
+*/
