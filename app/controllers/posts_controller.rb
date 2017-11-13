@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   
   before_action :authenticate_user!
-  before_action :owned_post, only:[:edit, :update, :destroy]
+  
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :owned_post, only:[:edit, :update, :destroy]
   
 
 
@@ -58,6 +59,8 @@ class PostsController < ApplicationController
   end
 
   def owned_post
+    p @post
+    p @post.user
   unless current_user == @post.user
     flash[:alert] = "That post doesn't belong to you!"
     redirect_to root_path
