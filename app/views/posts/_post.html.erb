@@ -3,7 +3,8 @@
     <div class="post-head">
       <div class="thumb-img"></div>
       <div class="user-name">
-        <%= post.user.user_name %>
+        <%= User.find(post.user_id).user_name %>
+
       </div>
     </div>
     <div class="image center-block">
@@ -12,7 +13,6 @@
     <div class="post-bottom">
       <div class="caption">
         <div class="user-name">
-          <%= post.user.user_name %>
         </div>
         <%= post.caption %>
       </div>
@@ -34,7 +34,7 @@
         <% end %>
       <% end %>
     </div>
-    <div class="comment-like-form row">
+    <div class="comment-like-form row">    
       <div class="like-button col-sm-1">
         <span class="glyphicon glyphicon-heart-empty"></span>
       </div>
