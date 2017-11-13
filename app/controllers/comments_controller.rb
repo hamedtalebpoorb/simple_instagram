@@ -6,8 +6,10 @@ class CommentsController < ApplicationController
 		@comment.user_id = current_user.id
 
 		if @comment.save
-			flash[:success] = "you commented successfully!"
-			redirect_to root_path
+			respond_to do |format|
+				#format.html { redirect_to root_path } 
+				format.js
+			end
 		else
 			flash[:alert] = "not commented!"
 			render root_path

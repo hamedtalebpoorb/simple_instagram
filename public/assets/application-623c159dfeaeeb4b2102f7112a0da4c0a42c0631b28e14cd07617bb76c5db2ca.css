@@ -13,10 +13,10 @@
  *
 
 
+ 
  */
 /*// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 */
-/*bootstrap required*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -384,9 +384,9 @@ th {
   }
 }
 @font-face {
-    font-family: 'Glyphicons Halflings';
-    src: url('/assets/glyphicons-halflings-regular.eot');
-    src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  font-family: 'Glyphicons Halflings';
+  src: url("/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot");
+  src: url("/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot?#iefix") format("embedded-opentype"), url("/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2") format("woff2"), url("/assets/bootstrap/glyphicons-halflings-regular-a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742.woff") format("woff"), url("/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf") format("truetype"), url("/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg#glyphicons_halflingsregular") format("svg");
 }
 /* line 24, /home/htb/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_glyphicons.scss */
 .glyphicon {
@@ -8797,6 +8797,11 @@ button.close {
     display: none !important;
   }
 }
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("/assets/glyphicons-halflings-regular.eot");
+  src: url("/assets/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("/assets/glyphicons-halflings-regular.woff2") format("woff2"), url("/assets/glyphicons-halflings-regular.woff") format("woff"), url("/assets/glyphicons-halflings-regular.ttf") format("truetype"), url("/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+}
 /* line 25, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 body {
   background-color: #fafafa;
@@ -8873,7 +8878,7 @@ body {
   border-top: 1px solid #eeefef;
 }
 
-/* line 93, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 94, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .post-bottom {
   margin-bottom: 7px;
   padding-top: 24px;
@@ -8883,41 +8888,41 @@ body {
   font-size: 15px;
   line-height: 18px;
 }
-/* line 94, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 95, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .post-bottom .user-name, .post-bottom .comment-content {
   display: inline;
 }
-/* line 97, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 98, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .post-bottom .caption {
   margin-bottom: 7px;
 }
-/* line 100, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 101, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .post-bottom .user-name {
   font-weight: 500;
   margin-right: 0.3em;
   color: #125688;
   font-size: 15px;
 }
-/* line 106, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 107, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .post-bottom .user-name, .post-bottom .caption-content {
   display: inline;
 }
-/* line 109, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 110, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .post-bottom #comment {
   margin-top: 7px;
 }
-/* line 111, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 112, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .post-bottom #comment .user-name {
   font-weight: 500;
   margin-right: 0.3em;
 }
-/* line 115, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 116, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .post-bottom #comment .delete-comment {
   float: right;
   color: #515151;
 }
 
-/* line 129, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 130, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .comment_content {
   font-size: 15px;
   line-height: 18px;
@@ -8926,7 +8931,7 @@ body {
   color: #4B4F54;
 }
 
-/* line 137, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 138, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .comment-like-form {
   padding-top: 24px;
   margin-top: 13px;
@@ -8940,7 +8945,7 @@ body {
 }
 
 /* ## Wrapper and styling for the new and edit views ## */
-/* line 151, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 152, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .form-wrapper {
   width: 60%;
   margin: 20px auto;
@@ -8950,8 +8955,14 @@ body {
   border-radius: 3px;
 }
 
-/* line 160, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
+/* line 161, /home/htb/rails-apps/Photogram/app/assets/stylesheets/application.scss */
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
+/*
+.like-button {
+  @extend %glyphicon-heart-empty;
+}
+*/
