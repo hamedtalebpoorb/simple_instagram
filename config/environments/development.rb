@@ -1,4 +1,8 @@
 Rails.application.configure do
+  #newly added
+  require 'tlsmail'
+  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -61,29 +65,34 @@ Rails.application.configure do
   #   location: '/usr/sbin/sendmail',
   #   arguments: '-i'
   # }
-  config.action_mailer.perform_deliveries = true
 
 
-  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
+    enable_starttls_auto: true,
+    address:              'smtp.gmail.com',
+    port:                 '587',
+    tls:                  true,
+    domain:               ENV['MAIL_HOST'], #you can also use google.com
+    authentication:       :plain,
+    user_name:            ENV['SENDMAIL_USERNAME'],
+    password:             ENV['SENDMAIL_PASSWORD']
+  }
+  # config.action_mailer.perform_deliveries = true
+
+
+  # config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   # config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.default_options = {from: 'htbtesthtb'}
 
   #config for gmail-part
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = true
   #config.action_mailer.default_url_options = { host: ENV['MAIL_HOST'] }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    user_name:      ENV['SENDMAIL_USERNAME'],
-    password:       ENV['SENDMAIL_PASSWORD'],
-    domain:         ENV['MAIL_HOST'],
-    address:       'smtp.gmail.com',
-    port:          '587',
-    authentication: :plain,
-    enable_starttls_auto: true
-  }
 
   #to solve glyphicon buttons problem
   #config.assets.paths << "#{Rails}/vendor/assets/fonts"
