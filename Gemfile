@@ -38,8 +38,9 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'devise'
-gem 'glyphicons-rails' 
+gem 'glyphicons-rails'
 gem 'rails_admin', '~> 1.2'
+# gem 'smtp_tls'
 
 
 

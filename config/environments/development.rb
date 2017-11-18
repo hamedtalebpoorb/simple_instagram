@@ -1,7 +1,8 @@
 Rails.application.configure do
   #newly added
-  require 'tlsmail'
-  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+  #
+  # require 'tlsmail'
+  #Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -67,22 +68,33 @@ Rails.application.configure do
   # }
 
 
-  ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.perform_deliveries = true
-  ActionMailer::Base.raise_delivery_errors = true
-  ActionMailer::Base.smtp_settings = {
-    enable_starttls_auto: true,
-    address:              'smtp.gmail.com',
-    port:                 '587',
-    tls:                  true,
-    domain:               ENV['MAIL_HOST'], #you can also use google.com
-    authentication:       :plain,
-    user_name:            ENV['SENDMAIL_USERNAME'],
-    password:             ENV['SENDMAIL_PASSWORD']
-  }
+  # ActionMailer::Base.delivery_method = :smtp
+  # ActionMailer::Base.perform_deliveries = true
+  # ActionMailer::Base.raise_delivery_errors = true
+  # ActionMailer::Base.smtp_settings = {
+  #   enable_starttls_auto: true,
+  #   address:              'smtp.gmail.com',
+  #   port:                 '587',
+  #   tls:                  true,
+  #   domain:               ENV['MAIL_HOST'], #you can also use google.com
+  #   authentication:       :plain,
+  #   user_name:            ENV['SENDMAIL_USERNAME'],
+  #   password:             ENV['SENDMAIL_PASSWORD']
+  # }
   # config.action_mailer.perform_deliveries = true
 
+  #tuts point configs
+  config.action_mailer.delivery_method = :smtp
 
+  config.action_mailer.smtp_settings = {
+   address:              'smtp.gmail.com',
+   port:                 587,
+   domain:               ENV['MAIL_HOST'],
+   user_name:            ENV['SENDMAIL_USERNAME'],
+   password:             ENV['SENDMAIL_PASSWORD'],
+   authentication:       'plain',
+   enable_starttls_auto: true
+}
   # config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
