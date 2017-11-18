@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  #devise_for :users
   resources :posts do
   	resources :comments
   end
@@ -7,7 +8,12 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   # Routes match in priority from top to bottom
-  devise_for :users, :controllers => {registerations: 'registerations'}
+  # devise_for :users, :controllers => {registerations: 'registerations'}
+
+  devise_for :users, controllers: {
+        registerations: 'users/registerations'
+      }
+
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
