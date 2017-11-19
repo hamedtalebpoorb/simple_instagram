@@ -12,7 +12,7 @@
  *
  *= require_tree .
  *= require_self
- 
+
  */
 /*// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 */
@@ -91,7 +91,7 @@ body {
 
 
 .post-bottom {
-  .user-name, .comment-content { 
+  .user-name, .comment-content {
     display: inline;
   }
   .caption {
@@ -161,7 +161,71 @@ body {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+// css for devise/registration/new or signup
+html {
+  height: 100%;
+}
 
+.registration-bg {
+  padding-top:4em;
+  height: 100%;
+  background-image: image-url('signupbg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.register-panel{
+  opacity: 0.4;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+}
+
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
+// css for devise/sessions/new or login
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('loginbg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-panel{
+  opacity: 0.4;
+}
+// css for devise/sessions/new and registration/new
+.input-border-radius{
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
 /*
 .like-button {
   @extend %glyphicon-heart-empty;
