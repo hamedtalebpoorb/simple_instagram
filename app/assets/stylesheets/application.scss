@@ -226,6 +226,16 @@ html {
   border-radius: 8px;
   margin-bottom: 5px;
 }
+
+//for new post creation page
+#image-preview {
+  margin: 0px auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
 /*
 .like-button {
   @extend %glyphicon-heart-empty;
