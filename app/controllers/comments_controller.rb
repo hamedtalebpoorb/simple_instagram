@@ -5,9 +5,31 @@ class CommentsController < ApplicationController
 		@comment = @post.comments.build(comment_params)
 		@comment.user_id = current_user.id
 
-		if @comment.save
+		# collection.each do |variable|
+   # 		code
+		# end
+
+		Comment.all.each do |comment|
+			comment.update(comments_count: 0)
+			# comments_count = comment.comments_count.to_i
+   		if @comment.user_id == comment.user_id && @comment.post_id == comment.post_id
+				# p "xyzzzzzzzzzzzzzzzzzzzzzzzzzz"
+   			comment.comments_count = comment.comments_count + 1
+   		end
+		end
+
+
+		if (@comment.save)
+			p "pay attention:"
+			p @comment.comments_count
+				# p comment.user_id
+			#end
+			# p @comment
+			# p @comment.user_id
+			# p @comment.post_id
+			# p @comment.comments_count
 			respond_to do |format|
-				#format.html { redirect_to root_path } 
+				#format.html { redirect_to root_path }
 				format.js
 			end
 		else
@@ -18,12 +40,11 @@ class CommentsController < ApplicationController
 
 	def destroy
 		@comment = @post.comments.find(params[:id])
-	
+
 		@comment.destroy
 		flash[:success] = "comment deleted :("
 		redirect_to root_path
 	end
-
 
 	private
 
@@ -35,7 +56,3 @@ class CommentsController < ApplicationController
 		@post = Post.find(params[:post_id])
 	end
 end
-
-
-
-
