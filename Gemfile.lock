@@ -164,7 +164,7 @@ GEM
       rack (>= 1.1)
     rack-protection (2.0.0)
       rack
-    rack-test (0.7.0)
+    rack-test (0.7.1)
       rack (>= 1.0, < 3)
     rails (5.1.4)
       actioncable (= 5.1.4)
@@ -292,6 +292,7 @@ DEPENDENCIES
   glyphicons-rails
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari
   listen (>= 3.0.5, < 3.2)
   mailcatcher
   paperclip (~> 5.0.0)

@@ -42,6 +42,7 @@ gem 'glyphicons-rails'
 gem 'rails_admin', '~> 1.2'
 # gem 'smtp_tls'
 gem 'mailcatcher'
+gem 'kaminari'
 
 
 
