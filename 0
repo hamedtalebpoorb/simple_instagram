@@ -1,2 +1,0 @@
-      invoke  active_record
-      create    db/migrate/20171120130837_add_comments_count_to_comments.rb
