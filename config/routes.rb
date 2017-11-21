@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :like_dislikes
   #devise_for :users
   resources :posts do
   	resources :comments

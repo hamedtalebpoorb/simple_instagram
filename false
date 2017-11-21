@@ -1,0 +1,2 @@
+      invoke  active_record
+      remove    db/migrate/20171121093108_add_liked_to_like_dislikes.rb
