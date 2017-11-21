@@ -5,26 +5,15 @@ class CommentsController < ApplicationController
 
 		@comment = @post.comments.build(comment_params)
 		@comment.user_id = current_user.id
-
-		Comment.all.each do |comment|
-   		if @comment.user_id == comment.user_id && @comment.post_id == comment.post_id
-   			@comment.comments_count = @comment.comments_count + 1
-   		end
-		end
-
-		if @comment.comments_count <= 4
-			if @comment.save #innier if
+		if Comment.where(user_id: current_user,post_id: @post.id).count <= 4
+			if @comment.save
 				respond_to do |format|
-					#format.html { redirect_to root_path }
 					format.js
 				end
-			end #innier end
+			end
 		else
-			# flash[:notice] = "not commented!"
-			render root_path
-			# p "hiiiiiiiiiiiiiiiiiiiiiiiiii"
+			redirect_to root_path
 		end
-
 	end
 
 	def destroy
