@@ -14,6 +14,8 @@ Rails.application.routes.draw do
         registerations: 'users/registerations'
       }
 
+      delete 'destroy' => 'comments_controller#destroy', defaults: { format: 'js' }
+
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
