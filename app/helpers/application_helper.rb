@@ -7,4 +7,19 @@ module ApplicationHelper
     image_tag 'placeholder.jpg', id: 'image-preview', class: 'img-responsive'
   end
 
+  def bootstrap_class_for(flash_type)
+    case flash_type
+    when "success" #green
+      "alert-success"
+    when "error" #red
+      "alert-danger"
+    when "alert" #yellow
+      "alert-warning"
+    when "notice" #blue
+      "alert-info"
+    else
+      flash_type.to_s
+    end
+  end
+
 end

@@ -3,14 +3,13 @@
     <div class="post-head">
       <div class="thumb-img"></div>
       <div class="user-name">
-        <%= User.find(post.user_id).user_name %>
+        <%= link_to (User.find(post.user_id).user_name), profile_path(User.find(post.user_id).user_name) %>
       </div>
     </div>
     <div class="image center-block">
       <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
     </div>
     <div class="post-bottom">
-      <%= render 'posts/likes' , post:post%>
       <div class="caption">
         <div class="caption-content">
           <div class="user-name">

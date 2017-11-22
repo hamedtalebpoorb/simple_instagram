@@ -11,8 +11,7 @@
   <body>
     <%= render 'layouts/navbar' %>
     <!-- views for bogotobogo tut -->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <%= render partial: "shared/flash_messages", flash: flash%>
     <%= yield %>
   </body>
 </html>

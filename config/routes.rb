@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'profiles/show'
+
   resources :like_dislikes
   #devise_for :users
   resources :posts do
@@ -23,6 +25,7 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  get ':user_name', to: 'profiles#show', as: :profile
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end

@@ -18,8 +18,8 @@ class CommentsController < ApplicationController
 			respond_to do |format|
 				format.js
 			end
+			flash[:success] = "comment deleted :("
 		end
-		#flash[:success] = "comment deleted :("
 		#redirect_to root_path
 	end
 
